@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru-ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="icon" type="image/png" href="Side%20Bar/wasp-logo.png">
+    <link rel="stylesheet" type="text/css" href="Side%20Bar/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="Exercise%20Page/body.css">
+    <script>
+        function verify() {
+            var checked = true;
+            var answer;
+            answer = document.getElementById("answer1").value;
+            if(answer === "CREATE TABLE users (surname TEXT, name TEXT, patronymic TEXT, " +
+                "birth DATETIME, id INTEGER PRIMARY KEY IDENTITY(1,1);") {
+                document.getElementById("answer1-positive").innerHTML = "Верно";
+                document.getElementById("answer1-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer1-negative").innerHTML = "Неверно";
+                document.getElementById("answer1-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer2").value;
+            if(answer === "INSERT INTO users (surname, name, patronymic, birth) VALUES " +
+                "('Сергеев', 'Сергей', 'Сергеевич', '27-05-2001');") {
+                document.getElementById("answer2-positive").innerHTML = "Верно";
+                document.getElementById("answer2-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer2-negative").innerHTML = "Неверно";
+                document.getElementById("answer2-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer3").value;
+            if(answer === "INSERT INTO users (name) VALUES ('Олег');") {
+                document.getElementById("answer3-positive").innerHTML = "Верно";
+                document.getElementById("answer3-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer3-negative").innerHTML = "Неверно";
+                document.getElementById("answer3-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer4").value;
+            if(answer === "SELECT * FROM users WHERE name = 'Павел';") {
+                document.getElementById("answer4-positive").innerHTML = "Верно";
+                document.getElementById("answer4-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer4-negative").innerHTML = "Неверно";
+                document.getElementById("answer4-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer5").value;
+            if(answer === "SELECT * FROM users WHERE id > 2;") {
+                document.getElementById("answer5-positive").innerHTML = "Верно";
+                document.getElementById("answer5-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer5-negative").innerHTML = "Неверно";
+                document.getElementById("answer5-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer6").value;
+            if(answer === "SELECT * FROM users WHERE id > 5;") {
+                document.getElementById("answer6-positive").innerHTML = "Верно";
+                document.getElementById("answer6-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer6-negative").innerHTML = "Неверно";
+                document.getElementById("answer6-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer7").value;
+            if(answer === "SELECT * FROM users WHERE surname = 'Павлов' AND " +
+                "name = 'Павел' AND id > 5;") {
+                document.getElementById("answer7-positive").innerHTML = "Верно";
+                document.getElementById("answer7-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer7-negative").innerHTML = "Неверно";
+                document.getElementById("answer7-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer8").value;
+            if(answer === "SELECT DISTINCT * FROM users WHERE surname = 'Жданов';") {
+                document.getElementById("answer8-positive").innerHTML = "Верно";
+                document.getElementById("answer8-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer8-negative").innerHTML = "Неверно";
+                document.getElementById("answer8-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer9").value;
+            if(answer === "SELECT surname, name FROM users;") {
+                document.getElementById("answer9-positive").innerHTML = "Верно";
+                document.getElementById("answer9-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer9-negative").innerHTML = "Неверно";
+                document.getElementById("answer9-positive").innerHTML = "";
+                checked = false;
+            }
+
+            answer = document.getElementById("answer10").value;
+            if(answer === "DROP TABLE users;") {
+                document.getElementById("answer10-positive").innerHTML = "Верно";
+                document.getElementById("answer10-negative").innerHTML = "";
+            }
+            else {
+                document.getElementById("answer10-negative").innerHTML = "Неверно";
+                document.getElementById("answer10-positive").innerHTML = "";
+                checked = false;
+            }
+            if (checked === true)
+                window.location.href = "achievement.html";
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <div>
+            <header class="logo">
+                <a href="main.html"><img src="Side%20Bar/wasp-logo.png"></a>
+                <div>
+                    <h1>Реляционные СУБД</h1>
+                    <p>Основы SQL и базы данных с нуля</p>
+                </div>
+            </header>
+            <div class="menu-items-container">
+                <h3>Разделы<hr color="#595959"></h3>
+                <li><a href="databases.html"><div><img src="Side%20Bar/arrow-right.png"/>Базы данных</div></a></li>
+                <li><a href="sql.html"><div><img src="Side%20Bar/arrow-right.png"/>Основы SQL</div></a></li>
+                <li><a class="active" href="exercise.html"><div><img src="Side%20Bar/arrow-right.png"/>Сборник упражнений</div></a></li>
+            </div>
+        </div>
+        <footer>
+            <a href="https://studentambassadors.microsoft.com"><img src="Side%20Bar/lockup.png"></a>
+        </footer>
+    </ul>
+
+    <div class="vertical-container" style="margin-left:20%;/*height:1000px;*/">
+        <section class="cover-section">
+            <div class="subcontainer">
+                <div>
+                    <h1>Сборник упражнений</h1>
+                    <h2>Упражнения для улучшения навыков написания запросов к базам данным</h2>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <div class="subcontainer">
+                <div>
+                    <h3>Задание</h3>
+                    <p>Напишите запросы к базе данных на языке запросов SQL.</p>
+                </div>
+                <div>
+                    <div class="container">
+                        <form onsubmit ="return verify()">
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer1">1. Создать таблицу <b>users</b> с полями <b>surname</b>,
+                                        <b>name</b>, <b>patronymic</b>, <b>birth</b>, <b>id</b>
+                                        (ключевое поле, автоинкремент): </label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer1" placeholder="">
+                                    <p id="answer1-negative" style="color: red;"></p>
+                                    <p id="answer1-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer2">2. Вставить в таблицу <b>users</b> следующую запись со значениями
+                                        <b>surname</b> = <i>Сергеев</i>, <b>name</b> = <i>Сергей</i>, <b>patronymic</b>
+                                        = <i>Сергеевич</i>, <b>birth</b> = <i>27-05-2001</i>: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer2" placeholder="">
+                                    <p id="answer2-negative" style="color: red;"></p>
+                                    <p id="answer2-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer3">3. Вставить в таблицу <b>users</b> запись
+                                        со значением <b>name</b> = <i>Олег</i>: </label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer3" placeholder="">
+                                    <p id="answer3-negative" style="color: red;"></p>
+                                    <p id="answer3-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer4">4. Вывести из таблицы <b>users</b> записи (все поля) со
+                                        значением <b>name</b> = <i>Павел</i>:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer4" placeholder="">
+                                    <p id="answer4-negative" style="color: red;"></p>
+                                    <p id="answer4-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer5">5. Вывести из таблицы <b>users</b> записи (все поля)
+                                        со значением <b>id</b> > <i>2</i>:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer5" placeholder="">
+                                    <p id="answer5-negative" style="color: red;"></p>
+                                    <p id="answer5-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer6">6. Вывести из таблицы <b>users</b> записи (все поля)
+                                        со значением <b>id</b> > <i>5</i>:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer6" placeholder="">
+                                    <p id="answer6-negative" style="color: red;"></p>
+                                    <p id="answer6-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer7">7. Вывести из таблицы <b>users</b> записи (все поля)
+                                        со значениями <b>surname</b> = <i>Павлов</i>,
+                                        <b>name</b> = <i>Павел</i>, <b>id</b> > <i>5</i>:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer7" placeholder="">
+                                    <p id="answer7-negative" style="color: red;"></p>
+                                    <p id="answer7-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer8">8. Вывести из таблицы <b>users</b> записи (все поля)
+                                        без повторений со значением <b>surname</b> = <i>Жданов</i>:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer8" placeholder="">
+                                    <p id="answer8-negative" style="color: red;"></p>
+                                    <p id="answer8-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer9">9. Вывести из таблицы <b>users</b> записи (только поля
+                                        <b>surname</b> и <b>name</b>):</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer9" placeholder="">
+                                    <p id="answer9-negative" style="color: red;"></p>
+                                    <p id="answer9-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="answer10">10. Удалить таблицу <b>users</b>:</label>
+                                </div>
+                                <div class="col-75">
+                                    <input type="text" id="answer10" placeholder="">
+                                    <p id="answer10-negative" style="color: red;"></p>
+                                    <p id="answer10-positive" style="color: green;"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button type="button" onclick="verify()">Проверить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</body>
+</html>
