@@ -39,13 +39,15 @@ body .vertical-container .cover-section .subcontainer {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 100vw;
+    width: 90%;
 
     background-color: #343434;
     box-shadow: 0 2px 20px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
     padding-top: 15px;
 
     border-radius: 25px;
+    margin-top: 15px;
 }
 
 body .vertical-container .cover-section h1 {
@@ -110,6 +112,8 @@ body .vertical-container .content-section p.box {
 
     color: black;
     background-color: #ffad00;
+
+    text-align: center;
 }
 body .vertical-container .content-section li {
     margin-top: 3px;

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="Main%20Page/body.css">
 </head>
 <body>
-    <ul>
+    <ul class="sidebar">
         <div>
             <header class="logo">
                 <a href="main.html"><img src="Side%20Bar/wasp-logo.png"></a>
@@ -31,7 +31,27 @@
         </footer>
     </ul>
 
-    <div class="vertical-container" style="margin-left:20%;/*height:1000px;*/">
+    <div class="vertical-container">
+        <ul class="topbar">
+            <div>
+                <header class="logo">
+                    <a href="main.html"><img src="Side%20Bar/wasp-logo.png"></a>
+                    <div>
+                        <h1>Реляционные СУБД</h1>
+                        <p>Основы SQL и базы данных с нуля</p>
+                    </div>
+                </header>
+                <div class="menu-items-container">
+                    <h3>Разделы<hr color="#595959"></h3>
+                    <li><a href="databases.html"><div><img src="Side%20Bar/arrow-right.png"/>Базы данных</div></a></li>
+                    <li><a href="sql.html"><div><img src="Side%20Bar/arrow-right.png"/>Основы SQL</div></a></li>
+                    <li><a href="exercise.html"><div><img src="Side%20Bar/arrow-right.png"/>Сборник упражнений</div></a></li>
+                </div>
+            </div>
+            <footer>
+                <a href="https://studentambassadors.microsoft.com"><img src="Side%20Bar/lockup.png"></a>
+            </footer>
+        </ul>
         <section class="cover-section">
             <div class="subcontainer">
                 <img src="Main%20Page/wasp-logo.png">
@@ -44,30 +64,32 @@
             <h1 class="header">Разделы руководства</h1>
             <div class="container">
                 <a href="databases.html">
-                <div class="card">
-                    <div class="card-content">
-                        <img src="Main%20Page/db_icon.png">
-                        <h3>Базы данных</h3>
-                        <p>Понятие базы данных, реляционная модель, основные термины</p>
+                    <div class="card">
+                        <div class="card-content">
+                            <img src="Main%20Page/db_icon.png">
+                            <h3>Базы данных</h3>
+                            <p>Понятие базы данных, реляционная модель, основные термины</p>
+                        </div>
                     </div>
-                </div>
                 </a>
                 <a href="sql.html">
-                <div class="card">
-                    <div class="card-content">
-                        <img src="Main%20Page/sql_icon.png">
-                        <h3>Основы SQL</h3>
-                        <p>Синтаксис языка запросов SQL, основные операторы</p>
+                    <div class="card">
+                        <div class="card-content">
+                            <img src="Main%20Page/sql_icon.png">
+                            <h3>Основы SQL</h3>
+                            <p>Синтаксис языка запросов SQL, основные операторы</p>
+                        </div>
                     </div>
-                </div>
                 </a>
-                <div class="card">
-                    <div class="card-content">
-                        <img src="Main%20Page/pencil_icon.png">
-                        <h3>Сборник упражнений</h3>
-                        <p>Упражнения для улучшения навыков написания запросов к базам данным</p>
+                <a href="exercise.html">
+                    <div class="card">
+                        <div class="card-content">
+                            <img src="Main%20Page/pencil_icon.png">
+                            <h3>Сборник упражнений</h3>
+                            <p>Упражнения для улучшения навыков написания запросов к базам данным</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
         <section class="contact-section">
